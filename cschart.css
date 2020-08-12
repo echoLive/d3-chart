@@ -1,0 +1,159 @@
+/* Container
+/* =============================================== */
+#chartbox {
+    padding-top: 0px; 
+    padding-left: 0px;
+}
+
+#controlbox {
+    background: #f9f9f9;
+    width: 200px;
+    padding-top: 8px;
+    padding-left: 10px;
+    border: 1px DimGray;
+    text-align: bottom;
+    height: 552px;
+}
+
+#navbox {
+    padding-top: 5px; 
+    padding-left: 20px; 
+    padding-bottom: 5px;
+    margin: 0px; 
+    background: #f9f9f9;
+    width: 1100px;
+}
+#demobox {
+    min-height: 310px; 
+    min-width: 700px; 
+    max-width: 80%; 
+    padding-top: 0px; 
+    padding-left: 0px; 
+    color: #fff;
+    }
+
+#csbox {
+    color: #fff; 
+    background: #f9f9f9;
+    margin: 0px; 
+    width: 1100px;
+    height: 420px;
+    font-size: small;
+    text-align: center;
+}
+
+#cotbox {
+    padding-top: 0px; 
+    padding-left: 22px; 
+    padding-bottom: 0px;
+    margin: 0px; 
+    background: #f9f9f9;
+    width: 1100px;
+    height: 150px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+-webkit-appearance: button;
+cursor: pointer;
+padding: 1px 5px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+display: inline-block;
+margin-bottom: 0;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border: 1px solid transparent;
+color: #fff;
+background-color: #337ab7;
+border-color: #2e6da4;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #0069d9;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.textlink {
+    font-family: sans-serif; color: black; font-size: 11px; 
+}
+
+.image_small {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1px;
+}
+
+.grid path {
+      stroke-width: 0;
+}
+
+.grid .tick {
+    stroke: grey;
+    stroke-width: 0.7px;
+
+}
+/* Candlestick Chart
+/* =============================================== */
+#chart1 .grid { stroke-opacity: .4; } 
+#chart1 .axis line,
+#chart1 .axis.xaxis path { fill: none; stroke: DimGray; shape-rendering: crispEdges; } /* Grid horizontal */
+#chart1 .tick text { font: 9px sans-serif; fill: black; stroke-opacity: .3; } /* Text X- und Y-Achse */
+#chart1 .axis.yaxis path { fill: none; stroke: DimGray; }   /* Horizontale Chartbegrenzungslinie rechts */
+#chart1 .bands rect { fill: DarkSlateGray; fill-opacity: 0; stroke-opacity: 0; pointer-events: all; shape-rendering: crispEdges; } /* Mouseoverlinie */
+#chart1 .bands .hoved { fill-opacity: .5; }
+#chart1 .sticks rect { pointer-events: none; shape-rendering: crispEdges; stroke-width: 1px; }
+#chart1 .sticks .rise, #chart1 .candles .rise { fill: green;  min-height: 1px; border-bottom: 1px green; } 
+#chart1 .sticks .fall, #chart1 .candles .fall { fill: #c00; min-height: 1px; border-bottom: 1px #c00; }
+#chart1 .sticks .hoved { stroke: grey; }
+#chart1 .candles .hoved { stroke: dimgray; }
+#chart1 .candles rect { pointer-events: none; shape-rendering: crispEdges; }
+
+#chart1 .volumebar { fill: #5a91bf; shape-rendering: crispEdges; }  /* Volumenbars, Breite in csbars.js */
+#chart1 .volumebar rect { pointer-events: none; }
+#chart1 .volumebar .hoved { fill: brown; }
+#chart1 .sigmabar { fill: darkgrey; } 
+#chart1 .sigmabar rect { pointer-events: none; }
+#chart1 .sigmabar .hoved { fill: white; }
+#chart1 .comshortline { width: 1px; color: orange; }
+
+#option    { width: 200px; height: 23px; float: left; padding-top: 3px; margin-left: 8px; }
+/* #option input { cursor: pointer; border-radius: 3px; color: #fff; font-size: 11px; background: Gray; border: none; } */
+#option input { cursor: pointer; border: 1px solid darkgrey; color: #000; font-size: 11px; background: white; }
+
+#option .active { cursor: auto; background: #C0C0C0; }
+
+#infobar   { width: 800px; height: 25px; float: left; padding-top: 5px; margin-left: 5px; text-align: left; font-family: sans-serif; color: black; font-size: 11px; }
+.infohead  { width: 100px; height: 25px; margin: 0px 2px; float: left; font: 9px; }
+.infobox   { width: 80px; height: 25px; margin: 0px 2px; float: left; }    /* Breite der OHLCV-Anzeigefelder */
+.infovol  { width: 90px; height: 25px; margin: 0px 2px; float: left; font: 9px; }
+.infotail  { width: 100px; height: 25px; margin: 0px 2px; float: left; font: 9px; }
+.infointraday  { width: 150px; height: 25px; margin: 0px 2px; float: left; }
+
+#volchart .volbar .volfill { fill: crimson; } 
+#volchart .sigbar .sigfill { fill: crimson; } 
+#volchart input { cursor: pointer; }
+
+#chart1 .linepath { fill: none; stroke: SaddleBrown; stroke-width: 1.5px; }
+svg { cursor: crosshair; }
